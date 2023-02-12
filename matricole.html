@@ -1,0 +1,61 @@
+<head>
+    <title>le matricole</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="slideshow3" style="max-width:800px;position:relative">
+
+    <img class="matricole" src="cane9.jpg" style="width:100%">
+    <img class="matricole" src="cane10.jpg" style="width:100%">
+    <img class="matricole" src="cane11.jpg" style="width:100%">
+    <img class="matricole" src="cane12.jpg" style="width:100%">
+    
+    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+var i;
+var x = document.getElementsByClassName("matricole");
+if (n > x.length) {slideIndex = 1}
+if (n < 1) {slideIndex = x.length}
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";  
+}
+x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+    
+    </div>
+    
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("matricole");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+    <button onclick="document.location='index.html'">torna indietro</button>
+    </body>
